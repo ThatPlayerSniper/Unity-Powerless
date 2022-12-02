@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        ResetHealth();
+
     }
 
 
