@@ -15,9 +15,9 @@ public class Health : MonoBehaviour
         currentHealth = MAX_HEALTH;
     }
 
-    void Update()
+    void Start()
     {
-
+        ResetHealth();
     }
 
 

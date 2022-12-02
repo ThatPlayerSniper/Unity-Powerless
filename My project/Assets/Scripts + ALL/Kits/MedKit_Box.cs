@@ -7,16 +7,15 @@ public class MedKit_Box : MonoBehaviour
 {
     [SerializeField] GameObject player;
     Health health;
-
-    void Start()
-    {
-        health = player.GetComponent<Health>();
-    }
+    public int heal = 50;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+        if (collision.GetComponent<Health>() != null)
+        {
+            health = player.GetComponent<Health>();
+            health.Heal(heal);
+        }
+        Destroy(gameObject);
     }
-
-
 }
