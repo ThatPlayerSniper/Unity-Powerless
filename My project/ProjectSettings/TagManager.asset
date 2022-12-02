@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - bullet
+  - Enemie
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Obstasle
+  - Water
+  - UI
+  - Wall
+  - Bullet Enemy
+  - Player Bullet
+  - Player
+  - Enemy
+  - Kits
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 2108404171
+    locked: 0
+  - name: MidGround
+    uniqueID: 323148481
+    locked: 0
+  - name: ForGround
+    uniqueID: 421416171
+    locked: 0
