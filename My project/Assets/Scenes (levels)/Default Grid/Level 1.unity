@@ -300,24 +300,6 @@ Transform:
   m_Father: {fileID: 1789411770}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &526116779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7740535502998221402, guid: 0e97a9f0b87c1064fa1297a958c7d22a, type: 3}
-  m_PrefabInstance: {fileID: 7740535503423395313}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &526116782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526116779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f992e726802fe498016605bc26b9ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 145813707}
 --- !u!1 &592921132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,25 +1602,6 @@ Transform:
   m_Father: {fileID: 1789411770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &972972093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2834114286859867838, guid: cffd9eb8ef798714893e72de9167e583, type: 3}
-  m_PrefabInstance: {fileID: 2834114286989227651}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &972972097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972972093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4d1ba2255b79694693a327f36eaa9a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 363323278}
-  heal: 50
 --- !u!1 &982818334
 GameObject:
   m_ObjectHideFlags: 0
@@ -36626,10 +36589,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 6296490180966360292, guid: cffd9eb8ef798714893e72de9167e583, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 9190316556390830287, guid: cffd9eb8ef798714893e72de9167e583, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 363323278}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cffd9eb8ef798714893e72de9167e583, type: 3}
 --- !u!1001 &3175815733534374610
@@ -36696,10 +36659,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5460853380568332608, guid: 0e97a9f0b87c1064fa1297a958c7d22a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 6499910265128778043, guid: 0e97a9f0b87c1064fa1297a958c7d22a, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 145813707}
     - target: {fileID: 7740535502998221402, guid: 0e97a9f0b87c1064fa1297a958c7d22a, type: 3}
       propertyPath: m_Name
       value: Box/Ammo
