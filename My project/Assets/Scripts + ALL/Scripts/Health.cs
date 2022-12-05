@@ -9,7 +9,6 @@ public class Health : MonoBehaviour
 
     //  private bool Dead = false;
     
-
     public void ResetHealth()
     {
         currentHealth = MAX_HEALTH;
