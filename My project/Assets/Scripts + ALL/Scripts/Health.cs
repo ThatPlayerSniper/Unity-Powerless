@@ -9,19 +9,20 @@ public class Health : MonoBehaviour
 
     public Health_Bar hp_bar;
 
+
     //  private bool Dead = false;
     
     public void ResetHealth()
     {
         currentHealth = MAX_HEALTH;                   // Dumb checks remove if coflit with values
         hp_bar.SetHp(MAX_HEALTH);
+        hp_bar.SetHp(currentHealth);
     }
 
     void Start()
     {
-        ResetHealth(); //Method
-    }
 
+    }
 
     public void Damage(int amount)
     {
@@ -29,8 +30,6 @@ public class Health : MonoBehaviour
         if (amount < 0) throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
 
         currentHealth -= amount;
-
-        hp_bar.SetHp(currentHealth);
 
         //Change color on hit 
         StartCoroutine(VisualIndicator(Color.red));
