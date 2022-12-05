@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 4304281634267771151}
     - target: {fileID: 4550114568031987452, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: m_Name
-      value: Bomb Enemy
+      value: Bomb_Enemy_#1
       objectReference: {fileID: 0}
     - target: {fileID: 4550114568031987452, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: m_Layer
@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550114568031987454, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: m_Mass
-      value: 0.0001
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 4550114568031987454, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: m_Constraints
@@ -200,3 +200,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   MAX_HEALTH: 100
+  hp_bar: {fileID: 0}

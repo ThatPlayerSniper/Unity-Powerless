@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int currentHealth = 100;
-    [SerializeField] public int MAX_HEALTH = 100;
+    [SerializeField] public int currentHealth;
+    [SerializeField] public int MAX_HEALTH;
+
+    public Health_Bar hp_bar;
 
     //  private bool Dead = false;
     
     public void ResetHealth()
     {
-        currentHealth = MAX_HEALTH;
+        currentHealth = MAX_HEALTH;                   // Dumb checks remove if coflit with values
+        hp_bar.SetHp(MAX_HEALTH);
     }
 
     void Start()
     {
-        ResetHealth();
+        ResetHealth(); //Method
     }
 
 
     public void Damage(int amount)
     {
+        //Checking if damage is positive
         if (amount < 0) throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
 
         currentHealth -= amount;
 
+        hp_bar.SetHp(currentHealth);
+
+        //Change color on hit 
         StartCoroutine(VisualIndicator(Color.red));
         
+        //Die 
         if (currentHealth <= 0)
         {
             Die();        
@@ -36,7 +44,7 @@ public class Health : MonoBehaviour
 
     public void Heal(int amount)
     {
-        if (amount < 0)
+        if (amount < 0)  //Check if healing is not negative
         {
             throw new System.ArgumentOutOfRangeException("Cannot have negative healing");
         }

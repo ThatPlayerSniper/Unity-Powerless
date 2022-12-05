@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8a610000
-      m_LastClickedID: 24970
-      m_ExpandedIDs: 7a8ffffff8fafffffefaffff28fbffff2afbffff3e6100008a610000
+      m_SelectedIDs: e4a90000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0830ffff6639ffff7a8ffffff8fafffffefaffff28fbffff2afbfffff4ffffff8a61000090610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.618063, y: -1.1673478, z: 0.4721248}
+    m_Target: {x: 7.2258325, y: -4.0141435, z: 3.3058903}
     speed: 2
-    m_Value: {x: 6.618063, y: -1.1673478, z: 0.4721248}
+    m_Value: {x: 7.2258325, y: -4.0141435, z: 3.3058903}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.629035
+    m_Target: 8.384996
     speed: 2
-    m_Value: 3.629035
+    m_Value: 8.384996
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts + ALL/Scripts/Enemy's Script + ALL/Test #3
+    - Assets/Scripts + ALL/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 92
   m_LastFolders:
-  - Assets/Scripts + ALL/Scripts/Enemy's Script + ALL/Test #3
+  - Assets/Scripts + ALL/Scripts
   m_LastFoldersGridSize: 92
   m_LastProjectPath: C:\Users\aeal\Documents\GitHub\Unity-Powerless\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 136}
-    m_SelectedIDs: 36650000
-    m_LastClickedID: 25910
-    m_ExpandedIDs: 00000000786400007a6400007c6400007e64000080640000826400008464000086640000886400008a6400008c6400008e64000090640000926400009464000096640000986400009a6400009c6400009e640000a0640000a264000000ca9a3b
+    scrollPos: {x: 0, y: 376.49948}
+    m_SelectedIDs: 9a640000
+    m_LastClickedID: 25754
+    m_ExpandedIDs: 00000000786400007a6400007c6400007e64000080640000826400008464000086640000886400008a6400008c6400008e64000090640000926400009464000096640000986400009a6400009c6400009e640000a0640000a26400002465000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,9 +740,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8a610000
-    m_LastClickedInstanceID: 24970
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: e4a90000
+    m_LastClickedInstanceID: 43492
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003c620000e8dc0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
