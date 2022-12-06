@@ -80,9 +80,17 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4550114568031987333, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
+      propertyPath: MAX_HEALTH
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550114568031987333, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: animComponent
       value: 
       objectReference: {fileID: 4304281634267771151}
+    - target: {fileID: 4550114568031987333, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4550114568031987452, guid: 31e8ad3f977e42c438b56aeb26f395a2, type: 3}
       propertyPath: m_Name
       value: Bomb_Enemy_#1
@@ -155,7 +163,7 @@ MonoBehaviour:
   damage: 30
   patrols: 4.46
   LineOfSite: 4.46
-  PersonalSpace: 0.81
+  PersonalSpace: 0.21
   axisMovement: {x: 0, y: 0}
 --- !u!114 &602394219
 MonoBehaviour:
