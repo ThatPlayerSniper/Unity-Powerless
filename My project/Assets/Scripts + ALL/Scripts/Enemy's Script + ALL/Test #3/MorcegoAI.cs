@@ -15,8 +15,7 @@ public class MorcegoAI : MonoBehaviour
     public Transform player;                   //Target
 
     //Speed by Default (Change to adjust)
-    public float speed = 1f;
-    public int damage = 100;
+    public float speed;                       //ajustable speed
 
     //Circle Of the Enemy
     public float patrols;                     // Patrol area

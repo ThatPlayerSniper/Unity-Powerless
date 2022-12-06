@@ -14131,7 +14131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 602394212, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
       propertyPath: patrolPoints.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 602394212, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -14145,6 +14145,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[2]
       value: 
       objectReference: {fileID: 95555143}
+    - target: {fileID: 602394212, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2122025320}
     - target: {fileID: 4304281634267771147, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
       propertyPath: m_RootOrder
       value: 7
