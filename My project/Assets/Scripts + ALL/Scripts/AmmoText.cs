@@ -18,7 +18,6 @@ public class AmmoText : MonoBehaviour
         health = player.GetComponent<Health>();     // Get health script attached to the player
     }
 
-    
     private void Update()
     {
         UpdateAmmoText();                           // Update text

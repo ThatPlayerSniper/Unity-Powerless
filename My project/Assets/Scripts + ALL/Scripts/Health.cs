@@ -11,17 +11,12 @@ public class Health : MonoBehaviour
 
 
     //  private bool Dead = false;
-    
-    public void ResetHealth()
-    {
-        currentHealth = MAX_HEALTH;                   // Dumb checks remove if coflit with values
-        hp_bar.SetHp(MAX_HEALTH);
-        hp_bar.SetHp(currentHealth);
-    }
 
     void Start()
     {
-
+        hp_bar.SetHp(MAX_HEALTH);
+        currentHealth = MAX_HEALTH;                   // Dumb checks remove if coflit with values
+        
     }
 
     public void Damage(int amount)
@@ -33,7 +28,9 @@ public class Health : MonoBehaviour
 
         //Change color on hit 
         StartCoroutine(VisualIndicator(Color.red));
-        
+
+        hp_bar.SetHp(currentHealth);
+
         //Die 
         if (currentHealth <= 0)
         {
