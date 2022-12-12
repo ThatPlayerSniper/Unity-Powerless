@@ -258,6 +258,14 @@ PrefabInstance:
       value: Shooter/Enemy/Boss
       objectReference: {fileID: 0}
     - target: {fileID: 5295051762892118161, guid: d688e860568f1bb4d8aa51d087cff3d6, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 3667352552711482164, guid: 431b7fa990ae0b04586085a68666b4f2, type: 3}
+    - target: {fileID: 5295051762892118161, guid: d688e860568f1bb4d8aa51d087cff3d6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 363323279}
+    - target: {fileID: 5295051762892118161, guid: d688e860568f1bb4d8aa51d087cff3d6, type: 3}
       propertyPath: fireRate
       value: 0.25
       objectReference: {fileID: 0}
@@ -656,6 +664,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &461850335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5295051762892118168, guid: d688e860568f1bb4d8aa51d087cff3d6, type: 3}
+  m_PrefabInstance: {fileID: 132985784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516136241
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +754,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.93
+  orthographic size: 2.45
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5819,7 +5832,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 602394212, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
       propertyPath: speed
-      value: 3.21
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 602394212, guid: 65a0aa7acb1333a44b9cb999b3645f36, type: 3}
       propertyPath: player
@@ -6002,6 +6015,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039601004}
   m_CullTransparentMesh: 1
+--- !u!1 &1044712469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044712470}
+  m_Layer: 10
+  m_Name: Bullet/Parent (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044712470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044712469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 461850335}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177189163
 GameObject:
   m_ObjectHideFlags: 0
@@ -13820,6 +13864,37 @@ Transform:
   - {fileID: 604411034}
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1345613949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345613950}
+  m_Layer: 10
+  m_Name: Bullet/Parent (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345613950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345613949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: -0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 461850335}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435569611
 GameObject:
@@ -70263,11 +70338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3154159611930928239, guid: eb18fc501a6d49c4aa9c1011fecea03e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.36265737
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3154159611930928239, guid: eb18fc501a6d49c4aa9c1011fecea03e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.991358
+      value: 5.37
       objectReference: {fileID: 0}
     - target: {fileID: 3154159611930928239, guid: eb18fc501a6d49c4aa9c1011fecea03e, type: 3}
       propertyPath: m_LocalPosition.z

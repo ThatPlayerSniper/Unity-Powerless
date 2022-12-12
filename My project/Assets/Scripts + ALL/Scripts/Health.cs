@@ -7,16 +7,9 @@ public class Health : MonoBehaviour
     [SerializeField] public int currentHealth;
     [SerializeField] public int MAX_HEALTH;
 
-    public Health_Bar hp_bar;
-
-
-    //  private bool Dead = false;
-
     void Start()
     {
-        hp_bar.SetHp(MAX_HEALTH);
-        currentHealth = MAX_HEALTH;                   // Dumb checks remove if coflit with values
-        
+        currentHealth = MAX_HEALTH;                  
     }
 
     public void Damage(int amount)
@@ -28,8 +21,6 @@ public class Health : MonoBehaviour
 
         //Change color on hit 
         StartCoroutine(VisualIndicator(Color.red));
-
-        hp_bar.SetHp(currentHealth);
 
         //Die 
         if (currentHealth <= 0)
@@ -48,16 +39,7 @@ public class Health : MonoBehaviour
          bool wouldBeOverMaxHealth = currentHealth + amount > MAX_HEALTH;
 
         currentHealth = wouldBeOverMaxHealth ? MAX_HEALTH : currentHealth + amount;
-        
-        // Same thing as above ^
-        //if (wouldBeOverMaxHealth)
-        //{
-        //    currentHealth = MAX_HEALTH;
-        //}
-        //else
-        //{
-        //    currentHealth += amount;
-        //}
+
     }
     public void Die()
     {

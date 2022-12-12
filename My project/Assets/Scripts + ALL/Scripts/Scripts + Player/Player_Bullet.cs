@@ -11,10 +11,11 @@ public class Player_Bullet : MonoBehaviour
 
     public int damage = 50; //Damage the bullet give
 
+
     void Update()
     {
-        Destroy(gameObject, lifeTime);
-        transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);              //Destroy bullet after 2s of fly time
+        transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+        Destroy(gameObject, lifeTime);              //Destroy bullet after 2s of fly time
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D)
