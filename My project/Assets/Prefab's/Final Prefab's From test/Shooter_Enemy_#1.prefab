@@ -195,8 +195,8 @@ MonoBehaviour:
   speed: 2
   patrols: 5.17
   LineOfSite: 5.17
-  InShootingRange: 3.88
-  PersonalSpace: 1.46
+  InShootingRange: 3.56
+  PersonalSpace: 1.31
   fireRate: 0.75
   bullet: {fileID: 3667352552711482164, guid: 431b7fa990ae0b04586085a68666b4f2, type: 3}
   bulletParent: {fileID: 5295051763866910818}
