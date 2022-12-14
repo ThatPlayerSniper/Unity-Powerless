@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Player_Cotroller : MonoBehaviour
 {
+    private bool isWalking;
+
+
     //Singleton mode
     public static Player_Cotroller instance; //Manter em "SCENE" diferente.
 
@@ -16,8 +19,11 @@ public class Player_Cotroller : MonoBehaviour
     public Vector2 axisMovement; // X & Y Movement
 
     //Move speed
+    [SerializeField] public float speed;
     [SerializeField] public float moveSpeed;
-     
+    [SerializeField] public float sprintSpeed;
+
+
     private bool facingRight = true;  //Flip stuff
 
     public string scenePassword; //guarda um nome quando o player sai da "SCENE".
@@ -48,10 +54,19 @@ public class Player_Cotroller : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        }
+        else
+        {
+            speed = moveSpeed;
+        }
+
         //mover horizontalmente
-        axisMovement.x = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        axisMovement.x = Input.GetAxisRaw("Horizontal");
         //mover verticalmente
-        axisMovement.y = Input.GetAxisRaw("Vertical") * moveSpeed;
+        axisMovement.y = Input.GetAxisRaw("Vertical");
 
         Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 
@@ -60,15 +75,17 @@ public class Player_Cotroller : MonoBehaviour
            CheckForFlipping();
         }
 
-        
-        if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
-        {
-            animator.SetBool("IsMoving", true); 
-        }
-        else
-        {
-            animator.SetBool("IsMoving", false);
-        }
+        //if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
+        //{
+        //    animator.SetBool("IsMoving", true); 
+        //}
+        //else
+        //{
+        //    animator.SetBool("IsMoving", false);
+        //}
+
+        isWalking = axisMovement.x != 0 || axisMovement.y != 0;
+        animator.SetBool("IsMoving", isWalking);
     }
 
     private void FixedUpdate()
@@ -78,7 +95,7 @@ public class Player_Cotroller : MonoBehaviour
 
     private void Move()
     {
-        rb.velocity = axisMovement.normalized * moveSpeed;
+        rb.velocity = axisMovement.normalized * speed;
     }
 
     private void CheckForFlipping()
