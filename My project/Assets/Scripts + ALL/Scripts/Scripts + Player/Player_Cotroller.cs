@@ -28,22 +28,6 @@ public class Player_Cotroller : MonoBehaviour
 
     public string scenePassword; //guarda um nome quando o player sai da "SCENE".
 
-    //Método do "INSTANCE"
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            if (instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
@@ -54,6 +38,10 @@ public class Player_Cotroller : MonoBehaviour
 
     private void Update()
     {
+        Move();
+        //Comando para o player mexer-se
+       //speed = moveSpeed;
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = sprintSpeed;
@@ -70,32 +58,36 @@ public class Player_Cotroller : MonoBehaviour
 
         Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 
+
         if(dir.x > 0 && !facingRight || dir.x < 0 && facingRight)
         {
            CheckForFlipping();
         }
 
-        //if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
-        //{
-        //    animator.SetBool("IsMoving", true); 
-        //}
-        //else
-        //{
-        //    animator.SetBool("IsMoving", false);
-        //}
-
         isWalking = axisMovement.x != 0 || axisMovement.y != 0;
         animator.SetBool("IsMoving", isWalking);
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
     }
 
     private void Move()
     {
         rb.velocity = axisMovement.normalized * speed;
+    }
+
+    //Método do "INSTANCE"
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void CheckForFlipping()

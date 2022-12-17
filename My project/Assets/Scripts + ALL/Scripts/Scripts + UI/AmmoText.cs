@@ -25,6 +25,7 @@ public class AmmoText : MonoBehaviour
 
     public void UpdateAmmoText()                    // Text config
     {
-        text.text = $"Health: {health.currentHealth} / {health.MAX_HEALTH}  | {weapon.currentClip} / {weapon.maxClipSize} - {weapon.CurrentAmmo} / {weapon.maxAmmoSize} |";
+        text.text = $"|{weapon.currentClip} / {weapon.maxClipSize} - {weapon.CurrentAmmo} / {weapon.maxAmmoSize} |";
+        //text.text = $"Health: {health.currentHealth} / {health.MAX_HEALTH}  | {weapon.currentClip} / {weapon.maxClipSize} - {weapon.CurrentAmmo} / {weapon.maxAmmoSize} |";
     }
 }
