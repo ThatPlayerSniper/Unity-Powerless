@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b62811a461ca9a4b8b940c00bfe11da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axisMovement: {x: 0, y: 0}
-  moveSpeed: 3
+  AxisMovementyx: {x: 0, y: 0}
+  Speed: 0
+  MovingSpeed: 2.5
+  SprintSpeed: 5
   scenePassword: 
 --- !u!114 &3154159611930928240
 MonoBehaviour:
@@ -251,7 +253,8 @@ Transform:
   m_LocalPosition: {x: 0.031, y: -0.38, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3154159612874568402}
   m_Father: {fileID: 3154159613075333491}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -330,13 +333,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154159612874568401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.141, y: -0.353, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.54, y: 0.1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3154159613075333491}
-  m_RootOrder: 1
+  m_Father: {fileID: 3154159612797827867}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3154159613075333490
 GameObject:
@@ -368,7 +371,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3154159612797827867}
-  - {fileID: 3154159612874568402}
   m_Father: {fileID: 3154159612100621933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -21,7 +21,7 @@ public class ShooterEnemy : MonoBehaviour
 
 
     //Circle Of the Enemy
-    public float patrols;                                     // Patrol area
+    public float Patrols;                                     // Patrol area
     public float LineOfSite;                                  // Line of sight
     public float InShootingRange;                             //Area where the enemy is gonna start attacking (if gun)
     public float PersonalSpace;                               // In Range of target
@@ -58,11 +58,11 @@ public class ShooterEnemy : MonoBehaviour
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if (distanceFromPlayer > patrols)
+        if (distanceFromPlayer > Patrols)
         {
-            patrol();
+            Patrol();
         }
-        if (distanceFromPlayer < patrols && distanceFromPlayer > LineOfSite)
+        if (distanceFromPlayer < Patrols && distanceFromPlayer > LineOfSite)
         {
             Chase();
         }
@@ -75,14 +75,14 @@ public class ShooterEnemy : MonoBehaviour
         {
             shoooting();
         }
-        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange)
+        if (distanceFromPlayer < InShootingRange && distanceFromPlayer > InShootingRange)
         {
             Chase();
         }
     }
 
     //Waypoint Script
-    private void patrol()
+    private void Patrol()
     {
         {
             Transform wp = patrolPoints[currentPatrolIndex];
@@ -117,7 +117,7 @@ public class ShooterEnemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, patrols);
+        Gizmos.DrawWireSphere(transform.position, Patrols);
         Gizmos.DrawWireSphere(transform.position, LineOfSite);
         Gizmos.DrawWireSphere(transform.position, InShootingRange);
         Gizmos.DrawWireSphere(transform.position, PersonalSpace);

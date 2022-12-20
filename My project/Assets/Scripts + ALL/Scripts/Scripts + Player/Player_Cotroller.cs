@@ -5,75 +5,84 @@ using UnityEngine;
 
 public class Player_Cotroller : MonoBehaviour
 {
-    private bool isWalking;
-
-
-    //Singleton mode
-    public static Player_Cotroller instance; //Manter em "SCENE" diferente.
 
     //Rigidbody 
-    private Rigidbody2D rb;
+    private Rigidbody2D Rb;
 
     Animator animator; //Animator 
     
-    public Vector2 axisMovement; // X & Y Movement
+    public Vector2 AxisMovementyx; // X & Y Movement
 
     //Move speed
-    [SerializeField] public float speed;
-    [SerializeField] public float moveSpeed;
-    [SerializeField] public float sprintSpeed;
+    [SerializeField] public float Speed;
+    [SerializeField] public float MovingSpeed;
+    [SerializeField] public float SprintSpeed;
+    private bool isWalking;
 
+    private bool FacingRight = true;  //Flip stuff
 
-    private bool facingRight = true;  //Flip stuff
-
+    //Singleton mode
+    public static Player_Cotroller instance; //Manter em "SCENE" diferente.
     public string scenePassword; //guarda um nome quando o player sai da "SCENE".
+
 
 
     private void Start()
     {
-        //Corpo de colisão
-        rb = GetComponent<Rigidbody2D>();
+        //Body of collision
+        Rb = GetComponent<Rigidbody2D>();
+        //Animator
         animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        Move();
-        //Comando para o player mexer-se
-       //speed = moveSpeed;
+
+        PlayerMovement();
         
+        //Ability 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = sprintSpeed;
+            Speed = SprintSpeed;
         }
         else
         {
-            speed = moveSpeed;
+            Speed = MovingSpeed;
         }
 
-        //mover horizontalmente
-        axisMovement.x = Input.GetAxisRaw("Horizontal");
-        //mover verticalmente
-        axisMovement.y = Input.GetAxisRaw("Vertical");
+        //Get's raw X value and makes it (+1 up / -1 down)
+        AxisMovementyx.x = Input.GetAxisRaw("Horizontal");
+        //Get's raw Y value and makes it (+1 up / -1 down)
+        AxisMovementyx.y = Input.GetAxisRaw("Vertical");
 
+        //Get's Mouse Position From WorldScreen Camera.
         Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 
-
-        if(dir.x > 0 && !facingRight || dir.x < 0 && facingRight)
+        //Check "Direction" (dir), and the flips.
+        if(dir.x > 0 && !FacingRight || dir.x < 0 && FacingRight)
         {
            CheckForFlipping();
         }
 
-        isWalking = axisMovement.x != 0 || axisMovement.y != 0;
+        //Checks if player is moving, then if it is moving turn's on the animation.
+        isWalking = AxisMovementyx.x != 0 || AxisMovementyx.y != 0;
         animator.SetBool("IsMoving", isWalking);
     }
 
-    private void Move()
+    //Makes the player move.
+    private void PlayerMovement()
     {
-        rb.velocity = axisMovement.normalized * speed;
+        Rb.velocity = AxisMovementyx.normalized * Speed;
     }
 
-    //Método do "INSTANCE"
+    //Flipping Player
+    private void CheckForFlipping()
+    {
+        FacingRight = !FacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    //Method to not destroy player on load (If player changes level).
     private void Awake()
     {
         if (instance == null)
@@ -88,12 +97,6 @@ public class Player_Cotroller : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void CheckForFlipping()
-    {
-        facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
     }
 
 }

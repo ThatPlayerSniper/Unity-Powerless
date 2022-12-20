@@ -6,8 +6,8 @@ using UnityEngine;
 public class AmmoText : MonoBehaviour
 {
 
-    public Weapon_Script weapon;                    // Get Variables from Reload method
-    public TextMeshProUGUI text;                    // Get Text from UI
+    public Weapon_Script Weapon;                    // Get Variables from Reload method
+    public TextMeshProUGUI TextUI;                    // Get Text from UI
     
     Health health;                                  // Get Variable from health script
     [SerializeField] GameObject player;             // Get gameobject
@@ -25,7 +25,9 @@ public class AmmoText : MonoBehaviour
 
     public void UpdateAmmoText()                    // Text config
     {
-        text.text = $"|{weapon.currentClip} / {weapon.maxClipSize} - {weapon.CurrentAmmo} / {weapon.maxAmmoSize} |";
-        //text.text = $"Health: {health.currentHealth} / {health.MAX_HEALTH}  | {weapon.currentClip} / {weapon.maxClipSize} - {weapon.CurrentAmmo} / {weapon.maxAmmoSize} |";
+        TextUI.text = $"|{Weapon.currentClip} / {Weapon.maxClipSize} - {Weapon.CurrentAmmo} / {Weapon.maxAmmoSize} |";
     }
+
 }
+                   //Add this to check Health if Health bar stops working.
+                   //$"Health: {health.currentHealth} / {health.MAX_HEALTH} 
