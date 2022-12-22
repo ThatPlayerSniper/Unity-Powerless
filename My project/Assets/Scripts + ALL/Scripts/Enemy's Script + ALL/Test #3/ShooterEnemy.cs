@@ -75,7 +75,7 @@ public class ShooterEnemy : MonoBehaviour
         {
             shoooting();
         }
-        if (distanceFromPlayer < InShootingRange && distanceFromPlayer > InShootingRange)
+        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange)
         {
             Chase();
         }
