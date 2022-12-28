@@ -76,24 +76,24 @@ public class Test4 : MonoBehaviour
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if (distanceFromPlayer > Patrols)
+        if (distanceFromPlayer > Patrols)// Se o player nao estiver perto
         {
             Patrol();
         }
-        if (distanceFromPlayer < Patrols && distanceFromPlayer > LineOfSite)
+        if (distanceFromPlayer < Patrols && distanceFromPlayer > LineOfSite) // Se for encontrado 
         {
             Chase();
         }
         //Apagar se ouver erro
-        if (distanceFromPlayer < LineOfSite && distanceFromPlayer > InShootingRange)
+        if (distanceFromPlayer < LineOfSite && distanceFromPlayer > InShootingRange) // se estiver proximo
         {
             Chase();
         }
-        else if (distanceFromPlayer <= InShootingRange && nextFireTime < Time.time)
+        else if (distanceFromPlayer <= InShootingRange && nextFireTime < Time.time) // se esta perto para disparar
         {
             Shoooting();
         }
-        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange)
+        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange) // se esta demasido perto
         {
             Chase();
         }
