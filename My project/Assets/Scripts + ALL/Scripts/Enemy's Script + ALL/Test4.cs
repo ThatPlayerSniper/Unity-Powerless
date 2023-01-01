@@ -33,7 +33,7 @@ public class Test4 : MonoBehaviour
     private float nextFireTime;
 
     //GameObject's
-    //public GameObject bullet;
+    //public GameObject bullet;                 //They are document because they might be needed for low difficulty
     //public GameObject bulletParent;
 
     //Enemy data from Data script
@@ -43,12 +43,6 @@ public class Test4 : MonoBehaviour
     private Rigidbody2D rb;
     public Vector2 axisMovement;
 
-    /// <summary>
-    /// ////////////////////////////////////////////////
-    /// </summary>
-    /// 
-
-
     //TEST VARIABLES
     public Rigidbody2D projectile;
     public float projectileSpeed;
@@ -56,7 +50,6 @@ public class Test4 : MonoBehaviour
 
     public void Start()
     {
-
         //Testing
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // SetEnemyValues();
@@ -65,35 +58,34 @@ public class Test4 : MonoBehaviour
         //Waypont stuff
         currentPatrolIndex = 0;
         currentPatrolPoint = patrolPoints[currentPatrolIndex];
-
-        //Shooting time
-
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if (distanceFromPlayer > Patrols)// Se o player nao estiver perto
+        if (distanceFromPlayer > Patrols)// If the player is not close 
         {
             Patrol();
         }
-        if (distanceFromPlayer < Patrols && distanceFromPlayer > LineOfSite) // Se for encontrado 
+        if (distanceFromPlayer < Patrols && distanceFromPlayer > LineOfSite) // If he is seen or if he detects the player 
         {
             Chase();
         }
         //Apagar se ouver erro
-        if (distanceFromPlayer < LineOfSite && distanceFromPlayer > InShootingRange) // se estiver proximo
+        if (distanceFromPlayer < LineOfSite && distanceFromPlayer > InShootingRange) // If he is inside the shooting range then:
         {
             Chase();
         }
-        else if (distanceFromPlayer <= InShootingRange && nextFireTime < Time.time) // se esta perto para disparar
+        else if (distanceFromPlayer <= InShootingRange && nextFireTime < Time.time) // Shoot
         {
             Shoooting();
         }
-        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange) // se esta demasido perto
+        if (distanceFromPlayer < PersonalSpace && distanceFromPlayer > InShootingRange) //If player enters private area
+        {
+            Chase();
+        }
+        if (distanceFromPlayer > InShootingRange && distanceFromPlayer < PersonalSpace) //If player enters private area
         {
             Chase();
         }
