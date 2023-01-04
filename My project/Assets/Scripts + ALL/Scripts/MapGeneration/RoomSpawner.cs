@@ -11,28 +11,42 @@ public class RoomSpawner : MonoBehaviour {
 	// 4 --> need right door
 
 
-	private RoomTemplates templates;
-	private int rand;
+	public GameObject RoomTemplatesOBJ;
+	public RoomTemplates templates;
+	//private int rand;
 	public bool spawned = false;
-
+	public int rand;
 	public float waitTime = 4f;
 
 	void Start(){
 		Destroy(gameObject, waitTime);
-		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
 		Invoke("Spawn", 0.1f);
+
+		templates = RoomTemplatesOBJ.GetComponent<RoomTemplates>();
 	}
 
 
 	void Spawn(){
 		if(spawned == false){
+			switch (openingDirection) { 
+				case 1:
+					// Need to spawn a room with a BOTTOM door.
+						rand = Random.Range(0, 4);
+						Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+					break; 
+				case 2:
+                    break;
+				case 3:
+                    break;
+				case 4:
+                    break;
+			}
+			
+			/*
 			if(openingDirection == 1){
-				// Need to spawn a room with a BOTTOM door.
-				rand = Random.Range(0, templates.bottomRooms.Length);
-				Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
 			} else if(openingDirection == 2){
 				// Need to spawn a room with a TOP door.
-				rand = Random.Range(0, templates.topRooms.Length);
+			    rand = Random.Range(0, templates.topRooms.Length);
 				Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
 			} else if(openingDirection == 3){
 				// Need to spawn a room with a LEFT door.
@@ -40,9 +54,11 @@ public class RoomSpawner : MonoBehaviour {
 				Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
 			} else if(openingDirection == 4){
 				// Need to spawn a room with a RIGHT door.
-				rand = Random.Range(0, templates.rightRooms.Length);
+			    rand = Random.Range(0, templates.rightRooms.Length);
 				Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
 			}
+			*/
+
 			spawned = true;
 		}
 	}

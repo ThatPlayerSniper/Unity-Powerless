@@ -138,9 +138,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destroyer
       objectReference: {fileID: 0}
+    - target: {fileID: 1521480558012254503, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
     - target: {fileID: 3565199045371921935, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822665080307050856, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
       objectReference: {fileID: 0}
     - target: {fileID: 4380476408805086901, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_RootOrder
@@ -194,6 +202,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5701895379709642877, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
     - target: {fileID: 5839343209707134707, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -205,6 +217,14 @@ PrefabInstance:
     - target: {fileID: 6292127317883603568, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760196760047366282, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290971307673246782, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
