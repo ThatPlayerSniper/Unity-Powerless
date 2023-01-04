@@ -6,7 +6,7 @@ public class Aiming_Script : MonoBehaviour
 {
     //Player Transform (Can't really explain it)
     [SerializeField] private Transform player;
-
+    public SpriteRenderer PlayerRenderer, GunRenderer;
     //Space for the gun
     [SerializeField] private float offset;
 
@@ -40,7 +40,17 @@ public class Aiming_Script : MonoBehaviour
             AimLocalScale.y = 1f;
         }
 
+        if(transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
+        {
+            GunRenderer.sortingOrder = PlayerRenderer.sortingOrder - 1;
+        }
+        else
+        {
+            GunRenderer.sortingOrder = PlayerRenderer.sortingOrder + 1;
+        }
+
         transform.localScale = AimLocalScale;
+
 
     }
 }
