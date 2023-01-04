@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DMG_Collider : MonoBehaviour
+public class Damage_Sword : MonoBehaviour
 {
-
     public int damage;  //ADD  "= 50" if tests don't go to plan.
 
     //damage to enemy on trigger with the collider of the player

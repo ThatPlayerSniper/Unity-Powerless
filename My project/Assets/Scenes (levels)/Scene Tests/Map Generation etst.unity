@@ -150,6 +150,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rooms
       objectReference: {fileID: 0}
+    - target: {fileID: 4380476408418550507, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380476408687722945, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
     - target: {fileID: 4380476408805086901, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -200,7 +208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380476408805086903, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380476408924253529, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380476409366779889, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: m_TagString
+      value: Rooms
       objectReference: {fileID: 0}
     - target: {fileID: 5701895379709642877, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_TagString
@@ -211,12 +227,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6026290450994091851, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
+      propertyPath: RoomTemplatesOBJ
+      value: 
+      objectReference: {fileID: 554823396}
+    - target: {fileID: 6026290450994091851, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: openingDirection
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6292127317883603568, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Rooms
       objectReference: {fileID: 0}
     - target: {fileID: 6760196760047366282, guid: ac091d19ed9e91b46ae3311f864ad0e2, type: 3}
       propertyPath: m_TagString
@@ -240,7 +260,7 @@ GameObject:
   - component: {fileID: 554823397}
   m_Layer: 0
   m_Name: RoomTemplates
-  m_TagString: Untagged
+  m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +422,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 4
+  RoomTemplatesOBJ: {fileID: 554823396}
+  templates: {fileID: 0}
   spawned: 0
+  rand: 0
   waitTime: 4
 --- !u!1 &1456427871 stripped
 GameObject:
@@ -422,7 +445,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 1
+  RoomTemplatesOBJ: {fileID: 554823396}
+  templates: {fileID: 0}
   spawned: 0
+  rand: 0
   waitTime: 4
 --- !u!1 &2013787253 stripped
 GameObject:
@@ -442,5 +468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 2
+  RoomTemplatesOBJ: {fileID: 554823396}
+  templates: {fileID: 0}
   spawned: 0
+  rand: 0
   waitTime: 4
