@@ -8,6 +8,8 @@ public class Aiming_Script : MonoBehaviour
     [SerializeField] private Transform player;
     //Space for the gun
     [SerializeField] private float offset;
+    
+    public SpriteRenderer PlayerRenderer, GunRenderer;
 
     void Update()
     {
@@ -40,5 +42,16 @@ public class Aiming_Script : MonoBehaviour
         }
 
         transform.localScale = AimLocalScale;
+
+        if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
+        {
+            GunRenderer.sortingOrder = PlayerRenderer.sortingOrder = -1;
+            Debug.Log("-1");
+        }
+        else
+        {
+            Debug.Log("1");
+            GunRenderer.sortingOrder = PlayerRenderer.sortingOrder = +1;
+        }
     }
 }
