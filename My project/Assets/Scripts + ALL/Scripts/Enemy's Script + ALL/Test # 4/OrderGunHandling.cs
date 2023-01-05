@@ -9,7 +9,7 @@ public class OrderGunHandling : MonoBehaviour
 
     public void Update()
     {
-        if(transform.eulerAngles.z > 0 && transform.eulerAngles.z > 180)
+        if(transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
         {
             GunRenderer.sortingOrder = PlayerRenderer.sortingOrder = -1;
         }
