@@ -8,6 +8,10 @@ TagManager:
   - Enemie
   - Enemy
   - Rooms
+  - TOP
+  - DOWN
+  - LEFT
+  - RIGHT
   layers:
   - Default
   - TransparentFX
