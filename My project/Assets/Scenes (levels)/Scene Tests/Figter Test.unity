@@ -123,11 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &434084551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3154159612797827866, guid: eb18fc501a6d49c4aa9c1011fecea03e, type: 3}
+  m_PrefabInstance: {fileID: 618514155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &434084553 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3154159612797827868, guid: eb18fc501a6d49c4aa9c1011fecea03e, type: 3}
   m_PrefabInstance: {fileID: 618514155}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &434084554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434084551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7ca19cf914b0748942137d82997637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerRenderer: {fileID: 1361875834}
+  GunRenderer: {fileID: 434084553}
 --- !u!1 &589375264
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589375264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8860167, y: -0.17706613, z: 0.033844218}
+  m_LocalPosition: {x: -6.50013, y: -0.17706613, z: 0.033844218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
